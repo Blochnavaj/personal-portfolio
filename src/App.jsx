@@ -4,6 +4,8 @@ import Header from './Components/Header'
 import MySkills from './Components/MySkills'
 import MyExperience from './Components/MyExperience'
 import AboutMe from './Components/AboutMe'
+import Project from './Components/Project'
+import ContactMe from './Components/ContactMe'
 
  
  function App() {
@@ -16,6 +18,8 @@ import AboutMe from './Components/AboutMe'
     </div>
     <MyExperience/>
     <AboutMe/>
+    <Project/>
+    <ContactMe/>
       </>
    )
  }
