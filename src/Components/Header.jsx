@@ -3,6 +3,8 @@ import header_image from '../assets/header_image.png'
 import { motion } from 'framer-motion'
 
 function Header() {
+
+ 
     return (
         <>
             <div className='  '>

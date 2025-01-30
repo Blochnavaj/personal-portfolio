@@ -9,7 +9,7 @@ export const workdata = [
         id: 1,
         company_name: 'MrLoggage',
         position: 'Software Engineer Intern',
-        duration: 'jun-2024 - September ',
+        duration: 'jun-2024 - Sept 2024 ',
         description: ' During my internship at MrLoggage as a full-stack developer, I utilized the MERN stack to design and deploy multiple websites. I played a key role in the entire development lifecycle, from conceptualizing innovative ideas and brainstorming solutions to transforming client-provided designs into enhanced user experiences. By revamping user interfaces and integrating functional improvements, I delivered projects that met client requirements with precision, showcasing a blend of technical expertise and creative problem-solving.',
         Tech_Use: 'Utilized technologies such as React.js, Node.js, Express.js, MongoDB, HTML, CSS, JavaScript, Git/GitHub, Data Validation, and RESTful APIs to support development tasks '
     },
@@ -22,14 +22,14 @@ export const workdata = [
         Tech_Use: ' Utilized Java, SQL, React, Node.js, Express.js, MongoDB, RESTful APIs, and Agile techniques to enhance software development processes'
     },
 
-    {
-        id: 3,
-        company_name: 'way to web pvt ltd',
-        position: 'Web Developer',
-        duration: 'june 2023 - june 2023',
-        description: 'During my one-week internship at Way to Web Pvt. Ltd., I gained hands-on experience in web development, collaborating with the team to understand industry workflows and best practices. I contributed to refining user interfaces and enhancing website functionality, further solidifying my skills in modern web technologies.',
-        Tech_Use: 'Html, CSS, Javascript, Bootstrap'
-    },
+    // {
+    //     id: 3,
+    //     company_name: 'way to web pvt ltd',
+    //     position: 'Web Developer',
+    //     duration: 'june 2023 - june 2023',
+    //     description: 'During my one-week internship at Way to Web Pvt. Ltd., I gained hands-on experience in web development, collaborating with the team to understand industry workflows and best practices. I contributed to refining user interfaces and enhancing website functionality, further solidifying my skills in modern web technologies.',
+    //     Tech_Use: 'Html, CSS, Javascript, Bootstrap'
+    // },
 
 
 ]
