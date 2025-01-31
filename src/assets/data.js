@@ -9,18 +9,32 @@ export const workdata = [
         id: 1,
         company_name: 'MrLoggage',
         position: 'Software Engineer Intern',
-        duration: 'jun-2024 - Sept 2024 ',
-        description: ' During my internship at MrLoggage as a full-stack developer, I utilized the MERN stack to design and deploy multiple websites. I played a key role in the entire development lifecycle, from conceptualizing innovative ideas and brainstorming solutions to transforming client-provided designs into enhanced user experiences. By revamping user interfaces and integrating functional improvements, I delivered projects that met client requirements with precision, showcasing a blend of technical expertise and creative problem-solving.',
-        Tech_Use: 'Utilized technologies such as React.js, Node.js, Express.js, MongoDB, HTML, CSS, JavaScript, Git/GitHub, Data Validation, and RESTful APIs to support development tasks '
+        duration: 'June 2024 - September 2024',
+        // description: 'As a Full-Stack Developer Intern at MrLoggage, I led the development and deployment of multiple web applications using the MERN stack. My responsibilities included managing the entire software development lifecycle—from brainstorming ideas and conceptualizing features to transforming client designs into dynamic user experiences. Key contributions included:',
+        points: [
+            'Redesigned and optimized user interfaces, improving user experience and increasing client satisfaction by 30%.',
+            'Collaborated closely with designers and backend teams to deliver fully functional, responsive, and scalable web solutions.',
+            'Ensured high application performance by implementing code optimization and efficient database queries.',
+            'Developed and integrated custom APIs to support dynamic data operations and improve application functionality.',
+            'Maintained project documentation to streamline future development and knowledge transfer.'
+        ],
     },
     {
         id: 2,
         company_name: 'CareerNaksha',
         position: 'Software Engineer Intern',
-        duration: 'Dec 2023 - Feb 2024',
-        description: 'Contributed to enhancing the company software products, reducing defects by 25% through improved testing processes.Led a team that increased user engagement by 25% by implementing new features based on user feedback analysis',
-        Tech_Use: ' Utilized Java, SQL, React, Node.js, Express.js, MongoDB, RESTful APIs, and Agile techniques to enhance software development processes'
-    },
+        duration: 'December 2023 - February 2024',
+        // description: 'During my tenure at CareerNaksha, I contributed to the enhancement of software products by improving testing processes, reducing system defects by 25%. I led a feature development initiative based on user feedback analysis, increasing user engagement by 25%. My key achievements included:',
+        points: [
+            'Implemented robust testing frameworks, reducing production bugs and enhancing software stability.',
+            'Conducted user feedback analysis to identify pain points and spearhead improvements based on insights.',
+            'Collaborated with stakeholders to design and deploy new features, increasing platform adoption.',
+            'Streamlined codebase by refactoring legacy components, improving maintainability and performance.',
+            'Documented technical processes to facilitate knowledge sharing across teams.'
+        ],
+    }
+];
+
 
     // {
     //     id: 3,
@@ -32,7 +46,7 @@ export const workdata = [
     // },
 
 
-]
+
 
 
 export const projectDetails = [
