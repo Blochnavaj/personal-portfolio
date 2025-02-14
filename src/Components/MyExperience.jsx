@@ -1,36 +1,25 @@
-import React from 'react'
-import { workdata } from '../assets/data.js'
-import { RiArrowRightDoubleLine } from "react-icons/ri";
+import React from 'react';
+import { workdata } from '../assets/data.js';
+import { RiArrowRightDoubleLine } from 'react-icons/ri';
 import { motion } from "framer-motion";
-
 
 
 function MyExperience() {
   return (
-    <>
+    <div className='bg-black py-8 mt-5'>
+      <h1 className='text-white text-4xl font-light text-center mb-8'>My <span className='font-bold text-orange-500'>Experience</span></h1>
 
-      <div className='bg-black mt-6'>
-        {/* Tittle section  */}
-        <div className='grid justify-center items-center md:mt-4 pt-6 '>
-          <h1 className='text-white text-4xl font-light'>My <span className='font-bold'>Experience</span></h1>
-        </div>
-
-
-        {/* Work Experience Section */}
-        <div className="mt-6 grid gap-6 md:p-14 p-5">
-          {workdata.map((item) => (
-            <div key={item.id} className="p-4 border rounded-lg shadow-md text-white">
-              <div className="md:flex md:justify-between md:items-center grid gap-3">
-                <h2 className="text-3xl font-bold md:ml-2">{item.company_name}</h2>
-                <p className="text-sm text-zinc-300 md:ml-2">{item.duration}</p>
-              </div>
-              <h3 className="text-lg font-semibold mt-2 md:ml-2">{item.position}</h3>
-
-              {/* Display points line by line */}
-              <ul className="mt-3 space-y-2">
-                {item.points && item.points.map((point, index) => (
-                  <li key={index} className="flex items-start">
-                    {/* Framer Motion for the animated arrow */}
+      <div className='grid gap-8 md:px-16 px-5'>
+        {workdata.map((item) => (
+          <div key={item.id} className='p-6 border border-gray-700 rounded-xl text-white bg-gray-900 hover:bg-gray-800 transition'>
+            <div className='md:flex md:justify-between md:items-center mb-4'>
+              <h2 className='text-2xl font-bold'>{item.company_name}</h2>
+              <p className='text-sm text-gray-400'>{item.duration}</p>
+            </div>
+            <h3 className='text-lg font-medium mb-3'>{item.position}</h3>
+            <ul className='space-y-2'>
+              {item.points && item.points.map((point, index) => (
+                <li key={index} className='flex items-start'>
                     <motion.div
                       className="mt-1"
                       animate={{ y: [0, -5, 0] }}
@@ -42,16 +31,15 @@ function MyExperience() {
                     >
                       <RiArrowRightDoubleLine className="w-5 h-5 text-zinc-600" />
                     </motion.div>
-                    <p className="ml-2 text-zinc-300">{point}</p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+                  <p className='ml-2 text-gray-300'>{point}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
-    </>
-  )
+    </div>
+  );
 }
 
-export default MyExperience
+export default MyExperience;

@@ -1,37 +1,45 @@
-import React from 'react'
-import { projectDetails } from '../assets/data'
+import React from 'react';
+import { projectDetails } from '../assets/data';
 import { RxExternalLink } from "react-icons/rx";
-
+import { motion } from 'framer-motion';
 
 function Project() {
   return (
-    <div className='bg-black' id='projects'>
-      <div className='flex justify-center items-center mt-3  '>
-        <h1 className='text-white font-light lg:mt-9 text-6xl mt-6'>My  <span className='text-white font-bold'>Projects</span></h1>
+    <div className='bg-black py-10' id='projects'>
+      <div className='flex justify-center items-center mb-10'>
+        <h1 className='text-white font-light text-5xl md:text-6xl'>My <span className='font-bold '>Projects</span></h1>
       </div>
 
-      <div>
-        {
-          projectDetails.map((project, index) => (
-            <div key={project.id} className={`flex flex-col md:flex-row ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-              } items-center my-6`}>
+      <div className='grid gap-10 md:gap-16 px-4 md:px-10'>
+        {projectDetails.map((project, index) => (
+          <motion.div 
+            key={project.id}
+            className={`flex flex-col md:flex-row ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center bg-zinc-800 rounded-2xl shadow-xl overflow-hidden`}
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.5 }}
+          >
+            <img 
+              className='w-full md:w-1/2 h-[250px] md:h-[350px] object-cover' 
+              src={project.image} 
+              alt={project.name} 
+            />
 
-              <img className={`w-[250x] h-[350px] md:w-auto p-4 mx-auto  ${index % 2 === 0 ? "md:p-6" : ""
-                }`} src={project.image} alt="" />
-              <div className='space-y-6 md:p-4 pl-4'>
-                <p className='text-white  font-bold text-3xl '>{project.number}</p>
-                <p className='text-white font-bold text-3xl  '>{project.name}</p>
-                <p className='text-zinc-500'>{project.description}</p>
-                <a className='text-white  hover:text-gray-600' target='_blank' href={project.link}>
-                  <RxExternalLink className='mt-5  w-12 h-12 ' />
-                </a>
+            <div className='p-6 md:p-10 text-white flex flex-col justify-between'>
+              <div className='space-y-4'>
+                <h2 className='text-xl md:text-2xl font-semibold'>{project.number}</h2>
+                <h3 className='text-2xl md:text-3xl font-bold'>{project.name}</h3>
+                <p className='text-gray-400 text-justify'>{project.description}</p>
               </div>
+
+              <a className='mt-6 text-white flex items-center hover:text-gray-300 transition' target='_blank' href={project.link} rel="noopener noreferrer">
+                <RxExternalLink className='mr-2 w-6 h-6' /> View Project
+              </a>
             </div>
-          ))
-        }
+          </motion.div>
+        ))}
       </div>
     </div>
-  )
+  );
 }
 
-export default Project
+export default Project;
