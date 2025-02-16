@@ -10,10 +10,10 @@ function AboutMe() {
             About <span className="text-orange-500">Me</span>
           </h2>
           <p className="text-lg text-gray-700 mb-4">
-            I'm a passionate full-stack web developer specializing in React.js and Node.js. I enjoy building user-centric digital experiences with clean code and pixel-perfect design.
+          I'm a passionate Full-Stack Developer specializing in React.js, Node.js, and modern web technologies. With a keen eye for pixel-perfect design and clean, scalable code, I build user-centric digital experiences that are both intuitive and high-performing.
           </p>
           <p className="text-lg text-gray-700 mb-4">
-            Since 2022, I've honed my skills in modern tools like Next.js, TypeScript, Tailwind CSS, and Supabase, crafting visually appealing and technically robust applications.
+          Since 2022, I've been mastering Next.js, TypeScript, Tailwind CSS, and Supabase, crafting robust, visually stunning applications that solve real-world challenges. My expertise lies in transforming complex ideas into seamless, production-ready web solutions.
           </p>
           <p className="text-lg text-gray-700 mb-4">
             I thrive on solving real-world problems through seamless web applications. Follow me on Twitter for tech bites or explore my work on GitHub.
