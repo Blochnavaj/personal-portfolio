@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 import { FaCloudDownloadAlt } from "react-icons/fa";
-import resume from "../assets/resume.pdf";
+import Resume from "../assets/Resume.pdf"
 
 const navLinks = [
   { id: "about", label: "About Me" },
@@ -35,7 +35,7 @@ function Navbar() {
 
         <div>
           <div className="hidden md:flex group">
-            <a href={resume} download="NavazBlochResume.pdf" className="bg-orange-500 text-white px-4 py-2 cursor-pointer rounded-md font-semibold w-full transition duration-300 ease-in-out active:scale-105 shadow-md hover:shadow-amber-700 hover:shadow-2xl flex justify-center items-center gap-1.5">Resume <FaCloudDownloadAlt /></a>
+            <a href={Resume} download="Resume.pdf" className="bg-orange-500 text-white px-4 py-2 cursor-pointer rounded-md font-semibold w-full transition duration-300 ease-in-out active:scale-105 shadow-md hover:shadow-amber-700 hover:shadow-2xl flex justify-center items-center gap-1.5">Resume <FaCloudDownloadAlt /></a>
           </div>
 
           <div onClick={toggleNav} className="right-8 top-6 absolute md:hidden">
@@ -53,7 +53,7 @@ function Navbar() {
                 </li>
               ))}
               <button className="bg-orange-500 text-white px-6 py-3 cursor-pointer rounded-md font-semibold w-[15rem] transition duration-300 ease-in-out active:scale-105 shadow-md hover:shadow-zinc-700 hover:shadow-2xl">
-                <a href={resume} download="NavazBlochResume.pdf" className='flex justify-center items-center gap-2 hover:text-white'>Resume <FaCloudDownloadAlt /></a>
+                <a href={Resume} download="NavazBlochResume.pdf" className='flex justify-center items-center gap-2 hover:text-white'>Resume <FaCloudDownloadAlt /></a>
               </button>
             </ul>
           </div>

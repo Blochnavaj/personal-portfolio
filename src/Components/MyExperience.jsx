@@ -29,7 +29,7 @@ function MyExperience() {
                         repeatType: "loop",
                       }}
                     >
-                      <RiArrowRightDoubleLine className="w-5 h-5 text-zinc-600" />
+                      <RiArrowRightDoubleLine className="w-5 h-5 text-orange-400" />
                     </motion.div>
                   <p className='ml-2 text-gray-300'>{point}</p>
                 </li>

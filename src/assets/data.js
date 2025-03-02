@@ -6,32 +6,31 @@ import project_3 from '../assets/project_3.png'
 
 export const workdata = [
     {
-        id: 1,
-        company_name: 'MrLoggage',
-        position: 'Software Engineer Intern',
-        duration: 'June 2024 - September 2024',
-        // description: 'As a Full-Stack Developer Intern at MrLoggage, I led the development and deployment of multiple web applications using the MERN stack. My responsibilities included managing the entire software development lifecycle—from brainstorming ideas and conceptualizing features to transforming client designs into dynamic user experiences. Key contributions included:',
-        points: [
-            'Redesigned and optimized user interfaces, improving user experience and increasing client satisfaction by 30%.',
-            'Collaborated closely with designers and backend teams to deliver fully functional, responsive, and scalable web solutions.',
-            'Ensured high application performance by implementing code optimization and efficient database queries.',
-            'Developed and integrated custom APIs to support dynamic data operations and improve application functionality.',
-            'Maintained project documentation to streamline future development and knowledge transfer.'
-        ],
+        "id": 1,
+        "company_name": "Pari Technology",
+        "position": "Full Stack Developer (React/Node)",
+        "duration": "February 2025 – Present",
+        "points": [
+            "Developed and optimized RESTful APIs with Node.js and Express.js, reducing API response time by 50% and improving system efficiency.",
+            "Maintained and updated 8+ client websites, resolving 98% of critical bugs within 12 hours, enhancing platform reliability.",
+            "Implemented secure authentication workflows using JWT and bcrypt, ensuring 100% compliance with data privacy regulations.",
+            "Deployed and managed 10+ containerized applications with Docker, cutting server costs by 30% through efficient resource allocation.",
+            "Led UI/UX enhancements using React.js, increasing user engagement by 35% through improved design and accessibility.",
+            "Collaborated cross-functionally with designers, backend teams, and stakeholders to deliver scalable, high-performance web solutions."
+        ]
     },
     {
-        id: 2,
-        company_name: 'CareerNaksha',
-        position: 'Software Engineer Intern',
-        duration: 'December 2023 - February 2024',
-        // description: 'During my tenure at CareerNaksha, I contributed to the enhancement of software products by improving testing processes, reducing system defects by 25%. I led a feature development initiative based on user feedback analysis, increasing user engagement by 25%. My key achievements included:',
-        points: [
-            'Implemented robust testing frameworks, reducing production bugs and enhancing software stability.',
-            'Conducted user feedback analysis to identify pain points and spearhead improvements based on insights.',
-            'Collaborated with stakeholders to design and deploy new features, increasing platform adoption.',
-            'Streamlined codebase by refactoring legacy components, improving maintainability and performance.',
-            'Documented technical processes to facilitate knowledge sharing across teams.'
-        ],
+        "id": 2,
+        "company_name": "CareerNaksha",
+        "position": "Junior Web Developer",
+        "duration": "December 2023 – January 2024",
+        "points": [
+            "Designed, built, and maintained client websites, achieving 95% customer satisfaction through responsive design and iterative feedback loops.",
+            "Troubleshot and resolved 50+ software issues (frontend/backend), increasing system uptime by 40% and improving overall performance.",
+            "Conducted QA testing using Jest unit tests, resolving 100% of critical bugs pre-launch, ensuring seamless software deployment.",
+            "Optimized front-end performance by implementing efficient code structures, reducing page load times by 45%.",
+            "Enhanced platform usability by integrating user feedback-driven updates, increasing user retention by 30%."
+        ]
     }
 ];
 
