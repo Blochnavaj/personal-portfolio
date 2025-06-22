@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+ import React, { useState } from 'react';
 import { Link } from 'react-scroll';
-import { FaCloudDownloadAlt } from "react-icons/fa";
-import Resume from "../assets/Resume.pdf"
+import { FaCloudDownloadAlt, FaBars, FaTimes } from "react-icons/fa";
+import Resume from "../assets/Resume.pdf";
 
 const navLinks = [
   { id: "about", label: "About Me" },
@@ -12,54 +12,75 @@ const navLinks = [
 
 function Navbar() {
   const [nav, setNav] = useState(false);
-
   const toggleNav = () => setNav(!nav);
   const closeNav = () => setNav(false);
 
   return (
-    <>
-      <div className="flex md:justify-between items-center mt-4 m-3 xl:justify-between py-3 ">
-         
-          <h1 className="text-4xl text-bold ml-12 tracking-wider "> <span className='bg-orange-500 text-white px-0.5 py-0.5 rounded-md'>N</span>AVAJ</h1>
-      
+    <header className="w-full fixed top-0 left-0 z-50 bg-white shadow-md">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        {/* Logo */}
+        <h1 className="text-3xl md:text-4xl font-bold tracking-wider">
+          <span className="bg-gradient-to-r from-orange-500 to-yellow-500 text-white px-2 py-1 rounded-md">N</span>avaj
+        </h1>
 
+        {/* Desktop Nav */}
+        <nav className="hidden md:flex gap-6">
+          {navLinks.map(link => (
+            <Link
+              key={link.id}
+              to={link.id}
+              smooth
+              duration={600}
+              onClick={closeNav}
+              className="text-gray-800 font-medium hover:text-orange-500 cursor-pointer transition duration-300"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+
+        {/* Resume Button */}
         <div className="hidden md:flex">
-          <ul className="flex gap-5 list-none">
-            {navLinks.map((link) => (
-              <li key={link.id} className='cursor-pointer'>
-                <Link to={link.id} smooth={true} duration={600} className="text-black font-semibold hover:text-amber-400" onClick={closeNav}>{link.label}</Link>
-              </li>
-            ))}
-          </ul>
+          <a
+            href={Resume}
+            download
+            className="flex items-center gap-2 bg-orange-500 text-white px-4 py-2 rounded-md font-semibold hover:bg-orange-600 transition"
+          >
+            Resume <FaCloudDownloadAlt />
+          </a>
         </div>
 
-        <div>
-          <div className="hidden md:flex group">
-            <a href={Resume} download="Resume.pdf" className="bg-orange-500 text-white px-4 py-2 cursor-pointer rounded-md font-semibold w-full transition duration-300 ease-in-out active:scale-105 shadow-md hover:shadow-amber-700 hover:shadow-2xl flex justify-center items-center gap-1.5">Resume <FaCloudDownloadAlt /></a>
-          </div>
-
-          <div onClick={toggleNav} className="right-8 top-6 absolute md:hidden">
-            {nav ? <i className="fa-solid fa-xmark"></i> : <i className="fa-solid fa-bars"></i>}
-          </div>
+        {/* Mobile Menu Icon */}
+        <div className="md:hidden text-2xl cursor-pointer text-gray-800" onClick={toggleNav}>
+          {nav ? <FaTimes /> : <FaBars />}
         </div>
-
-        {nav && (
-          <div className="md:hidden bg-white fixed top-0 left-0 w-full h-full flex flex-col items-center z-50">
-            <div className="absolute top-6 right-8 cursor-pointer text-black text-2xl" onClick={toggleNav}><i className="fa-solid fa-xmark"></i></div>
-            <ul className="flex flex-col gap-6 mt-16 list-none">
-              {navLinks.map((link) => (
-                <li key={link.id} className='cursor-pointer border border-gray-400 px-3 py-3 w-[15rem] flex justify-center items-center'>
-                  <Link to={link.id} smooth={true} duration={600} className="text-black font-semibold" onClick={closeNav}>{link.label}</Link>
-                </li>
-              ))}
-              <button className="bg-orange-500 text-white px-6 py-3 cursor-pointer rounded-md font-semibold w-[15rem] transition duration-300 ease-in-out active:scale-105 shadow-md hover:shadow-zinc-700 hover:shadow-2xl">
-                <a href={Resume} download="NavazBlochResume.pdf" className='flex justify-center items-center gap-2 hover:text-white'>Resume <FaCloudDownloadAlt /></a>
-              </button>
-            </ul>
-          </div>
-        )}
       </div>
-    </>
+
+      {/* Mobile Menu */}
+      {nav && (
+        <div className="md:hidden fixed inset-0 bg-white flex flex-col items-center justify-center gap-6 z-40">
+          {navLinks.map(link => (
+            <Link
+              key={link.id}
+              to={link.id}
+              smooth
+              duration={600}
+              onClick={closeNav}
+              className="text-xl font-semibold text-gray-700 hover:text-orange-500"
+            >
+              {link.label}
+            </Link>
+          ))}
+          <a
+            href={Resume}
+            download
+            className="flex items-center gap-2 bg-orange-500 text-white px-6 py-3 rounded-md font-semibold hover:bg-orange-600 transition"
+          >
+            Resume <FaCloudDownloadAlt />
+          </a>
+        </div>
+      )}
+    </header>
   );
 }
 
